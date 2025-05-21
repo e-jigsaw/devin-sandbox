@@ -21,29 +21,23 @@ const posts = (await getCollection('sessions')).sort(
 			}
 			ul {
 				display: flex;
-				flex-wrap: wrap;
-				gap: 2rem;
+				flex-direction: column;
+				gap: 1.5rem;
 				list-style-type: none;
 				margin: 0;
 				padding: 0;
 			}
 			ul li {
-				width: calc(50% - 1rem);
+				width: 100%;
+				border-bottom: 1px solid rgb(var(--gray-light));
+				padding-bottom: 1.5rem;
+			}
+			ul li:last-child {
+				border-bottom: none;
 			}
 			ul li * {
 				text-decoration: none;
 				transition: 0.2s ease;
-			}
-			ul li:first-child {
-				width: 100%;
-				margin-bottom: 1rem;
-				text-align: center;
-			}
-			ul li:first-child img {
-				width: 100%;
-			}
-			ul li:first-child .title {
-				font-size: 2.369rem;
 			}
 			ul li img {
 				margin-bottom: 0.5rem;
@@ -69,18 +63,15 @@ const posts = (await getCollection('sessions')).sort(
 				box-shadow: var(--box-shadow);
 			}
 			@media (max-width: 720px) {
+				main {
+					width: 100%;
+					padding: 0 1rem;
+				}
 				ul {
-					gap: 0.5em;
+					gap: 1rem;
 				}
 				ul li {
-					width: 100%;
-					text-align: center;
-				}
-				ul li:first-child {
-					margin-bottom: 0;
-				}
-				ul li:first-child .title {
-					font-size: 1.563em;
+					padding-bottom: 1rem;
 				}
 			}
 		</style>
