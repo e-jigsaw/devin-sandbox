@@ -3,6 +3,8 @@ import { type CollectionEntry, getCollection } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
 import { render } from 'astro:content';
 
+export const prerender = true;
+
 export async function getStaticPaths() {
 	const posts = await getCollection('sessions');
 	return posts.map((post) => ({
@@ -14,21 +16,8 @@ type Props = CollectionEntry<'sessions'>;
 
 const post = Astro.props;
 const { Content } = await render(post);
-
-// sessionDateの処理
-const postData = {...post.data};
-
-// sessionDateが存在し、文字列の場合はDateオブジェクトに変換
-if (postData.sessionDate) {
-  if (typeof postData.sessionDate === 'string') {
-    postData.sessionDate = new Date(postData.sessionDate);
-  }
-} else {
-  // sessionDateが存在しない場合は現在の日付を設定
-  postData.sessionDate = new Date();
-}
 ---
 
-<BlogPost {...postData}>
+<BlogPost {...post.data}>
 	<Content />
 </BlogPost>
