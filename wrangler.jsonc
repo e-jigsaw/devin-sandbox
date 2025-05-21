@@ -18,7 +18,9 @@
   },
   
   // Environment variables (customize as needed)
-  "env": {
-    "SITE_URL": "https://example.com"
+  "observability": {
+    "logs": {
+      "enabled": true
+    }
   }
 }
