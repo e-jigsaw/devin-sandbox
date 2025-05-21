@@ -1,7 +1,10 @@
 // Cloudflare Pages configuration for Astro project
 {
-  "name": "devin-sandbox",
+  "name": "devin",
   "compatibility_date": "2023-10-30",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
   "main": "dist/_worker.js",
   
   // Build settings
