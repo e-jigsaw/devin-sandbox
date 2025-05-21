@@ -15,4 +15,16 @@ const blog = defineCollection({
 	}),
 });
 
-export const collections = { blog };
+const sessions = defineCollection({
+	// Load Markdown files in the `src/content/sessions/` directory.
+	loader: glob({ base: './src/content/sessions', pattern: '**/*.md' }),
+	// Type-check frontmatter using a schema
+	schema: z.object({
+		title: z.string(),
+		description: z.string(),
+		// Transform string to Date object
+		sessionDate: z.coerce.date(),
+	}),
+});
+
+export const collections = { blog, sessions };
