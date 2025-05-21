@@ -15,6 +15,14 @@ YYYY-MM-DD-HH-mm-title.md
 2024-05-21-14-30-react-component-implementation.md
 ```
 
+## ファイル作成ディレクトリ
+
+```
+src/content/sessions
+```
+
+以下に配置すること
+
 ## フロントマター
 
 各セッションサマリは以下のフロントマターを含めてください：
