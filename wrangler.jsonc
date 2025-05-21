@@ -1,0 +1,27 @@
+// Cloudflare Pages configuration for Astro project
+{
+  "name": "devin-sandbox",
+  "compatibility_date": "2023-10-30",
+  
+  // Build settings
+  "build": {
+    "command": "npm run build",
+    "output_directory": "dist",
+    "root_directory": null
+  },
+
+  // Configuration specific to Astro
+  "site": {
+    "bucket": "./dist"
+  },
+  
+  // Route configuration
+  "routes": [
+    { "pattern": "/*", "script": null }
+  ],
+
+  // Environment variables (customize as needed)
+  "env": {
+    "SITE_URL": "https://example.com"
+  }
+}
