@@ -2,12 +2,11 @@
 {
   "name": "devin-sandbox",
   "compatibility_date": "2023-10-30",
+  "main": "dist/_worker.js",
   
   // Build settings
   "build": {
-    "command": "npm run build",
-    "output_directory": "dist",
-    "root_directory": null
+    "command": "npm run build"
   },
 
   // Configuration specific to Astro
@@ -15,11 +14,6 @@
     "bucket": "./dist"
   },
   
-  // Route configuration
-  "routes": [
-    { "pattern": "/*", "script": null }
-  ],
-
   // Environment variables (customize as needed)
   "env": {
     "SITE_URL": "https://example.com"
