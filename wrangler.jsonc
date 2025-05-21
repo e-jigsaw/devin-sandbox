@@ -1,7 +1,7 @@
 // Cloudflare Pages configuration for Astro project
 {
   "name": "devin",
-  "compatibility_date": "2023-10-30",
+  "compatibility_date": "2025-05-21",
   "compatibility_flags": [
     "nodejs_compat"
   ],
