@@ -3,6 +3,7 @@
   "name": "devin-sandbox",
   "compatibility_date": "2023-10-30",
   "main": "dist/_worker.js",
+  "nodejs_compat": true,
   
   // Build settings
   "build": {
